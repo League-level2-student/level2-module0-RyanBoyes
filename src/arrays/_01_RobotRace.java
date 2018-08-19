@@ -1,16 +1,37 @@
 package arrays;
 
+
+
+import java.util.Random;
+
+import javax.swing.text.StyledEditorKit.ForegroundAction;
+
+import org.jointheleague.graphical.robot.Robot;
+
 public class _01_RobotRace {
+
 	//1. make a main method
+public static void main(String[] args) {
+	Robot[] Rs = new Robot[5];
 
 	//2. create an array of 5 robots.
 
 	//3. use a for loop to initialize the robots.
-
+for(int i = 0; i<Rs.length;i++) {
+	Rs[i] = new Robot();
+}
 		//4. make each robot start at the bottom of the screen, side by side, facing up
+for(int a = 0; a<Rs.length;a++) {
+	Rs[a].setX(a*100+200); Rs[a].setY(550);
 
+}
 	//5. use another for loop to iterate through the array and make each robot move 
 	//   a random amount less than 50.
+Random randy = new Random();
+for(int z = 0;z<Rs.length;z++) {
+	int ran = randy.nextInt(50);
+	Rs[z].move(ran);
+}
 
 	//6. use a while loop to repeat step 5 until a robot has reached the top of the screen.
 
@@ -19,4 +40,7 @@ public class _01_RobotRace {
 	//8. try different races with different amounts of robots.
 
 	//9. make the robots race around a circular track.
+
 }
+}
+
