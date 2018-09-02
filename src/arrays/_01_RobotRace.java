@@ -37,6 +37,12 @@ while(!finished) {
 		Rz[q].setSpeed(15);
 		int rand = randy.nextInt(100);
 		Rz[q].move(rand);
+		if(Rz[q].getY()<=200*q+100) {
+			Rz[q].turn(90);
+		}
+		if(Rz[q].getX()>=1500-q*200) {
+			Rz[q].turn(90);
+		}
 		if(Rz[q].getY()<=0) {
 			JOptionPane.showMessageDialog(null, "Robot number " + q + " is the winner.");
 		}
